@@ -184,7 +184,7 @@ export default function Home() {
       {/* Property Management Section */}
 <section className="bg-zinc-900 text-white text-center py-16 sm:py-24 md:py-32 px-4 sm:px-6 relative overflow-hidden">
   <div className="relative mb-10">
-    <div className="text-[10vw] sm:text-[8vw] md:text-[6vw] font-extrabold text-white/10 leading-none">
+    <div className="text-[10vw] sm:text-[8vw] md:text-[6vw] font-extrabold text-white/10 leading-none ">
       PROPERTY MANAGEMENT
     </div>
     <h2 className="text-4xl sm:text-5xl md:text-[5rem] font-extrabold mt-[-2rem] sm:mt-[-3rem] z-10 relative drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
@@ -211,13 +211,13 @@ export default function Home() {
         subtitle: "לפי ביקוש ואירועים בעיר",
       },
       {
-        image: "/images/reno4.jpg",
+        image: "/images/danube.jpg",
         icon: CurrencyDollarIcon,
         title: "שירותי ניקיון, כניסה",
         subtitle: "אחזקה שוטפת ותמיכה טכנית",
       },
       {
-        image: "/images/reno4.jpg",
+        image: "/images/parliament.jpg",
         icon: HomeModernIcon,
         title: "שירות לקוחות 24/7",
         subtitle: "וטיפול בדיירים",
@@ -258,7 +258,7 @@ export default function Home() {
       <section className="bg-black text-white text-center py-24 px-4 sm:px-6">
         <h2 className="text-4xl sm:text-5xl font-extrabold mb-16">הכירו את הצוות שלנו</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-          {["/images/nadav.png", "/images/nadav.png", "/images/nadav.png"].map(
+          {["/images/nadav.png", "/images/ido.jpeg", "/images/yehonatan.png"].map(
             (src, index) => (
               <div
                 key={index}
