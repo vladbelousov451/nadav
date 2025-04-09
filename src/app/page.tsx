@@ -46,10 +46,16 @@ export default function Home() {
       </div>
 
       {/* Investments Section */}
-      <section className="bg-zinc-900 py-16 sm:py-24 md:py-32 px-4 sm:px-6 text-center">
-        <h2 className="text-4xl sm:text-5xl md:text-[5rem] font-extrabold leading-tight drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
-          INVESTMENTS
-        </h2>
+      <section className="bg-zinc-900 py-16 sm:py-24 md:py-32 px-4 sm:px-6 text-center relative overflow-hidden">
+        <div className="relative mb-10">
+          <div className="text-[10vw] sm:text-[8vw] md:text-[6vw] font-extrabold text-white/10 leading-none">
+            INVESTMENTS
+          </div>
+          <h2 className="text-4xl sm:text-5xl md:text-[5rem] font-extrabold mt-[-2rem] sm:mt-[-3rem] z-10 relative drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
+            INVESTMENTS
+          </h2>
+        </div>
+
         <h3 className="text-xl sm:text-2xl mt-4">השקעות נדל"ן בהתאמה אישית</h3>
         <p className="text-sm sm:text-lg mt-4">
           אנו מתמחים באיתור ובביצוע עסקאות נדל"ן במגוון אסטרטגיות, ביניהן:
@@ -67,13 +73,13 @@ export default function Home() {
               subtitle: "Presale",
             },
             {
-              image: "/images/presale.jpg",
+              image: "/images/parliament.jpg",
               icon: CurrencyDollarIcon,
               title: "עסקאות להגדלת ההון",
               subtitle: "Flip",
             },
             {
-              image: "/images/presale.jpg",
+              image: "/images/neighborhood.jpg",
               icon: HomeModernIcon,
               title: "דירות לפיצול והשבחה",
               subtitle: "Apartament",
@@ -106,10 +112,16 @@ export default function Home() {
       </section>
 
       {/* Renovations Section */}
-      <section className="bg-black text-white text-center py-16 sm:py-24 md:py-32 px-4 sm:px-6">
-        <h2 className="text-4xl sm:text-5xl md:text-[5rem] font-extrabold leading-tight drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
-          RENOVATIONS
-        </h2>
+      <section className="bg-black-400 text-white text-center py-16 sm:py-24 md:py-32 px-4 sm:px-6 relative overflow-hidden">
+        <div className="relative mb-10">
+          <div className="text-[10vw] sm:text-[8vw] md:text-[6vw] font-extrabold text-white/10 leading-none">
+            RENOVATIONS
+          </div>
+          <h2 className="text-4xl sm:text-5xl md:text-[5rem] font-extrabold mt-[-2rem] sm:mt-[-3rem] z-10 relative drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
+            RENOVATIONS
+          </h2>
+        </div>
+
         <h3 className="text-xl sm:text-2xl mt-6">שיפוץ והשבחת נכסים</h3>
         <p className="text-sm sm:text-lg mt-6 max-w-4xl mx-auto">
           לאחר איחוד הנכס, אנו מבצעים תהליך השבחה מקיף בהתאמה לייעוד הנכס ולדרישות המשקיע.
@@ -169,8 +181,81 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Property Management Section */}
+<section className="bg-zinc-900 text-white text-center py-16 sm:py-24 md:py-32 px-4 sm:px-6 relative overflow-hidden">
+  <div className="relative mb-10">
+    <div className="text-[10vw] sm:text-[8vw] md:text-[6vw] font-extrabold text-white/10 leading-none">
+      PROPERTY MANAGEMENT
+    </div>
+    <h2 className="text-4xl sm:text-5xl md:text-[5rem] font-extrabold mt-[-2rem] sm:mt-[-3rem] z-10 relative drop-shadow-[0_2px_10px_rgba(255,255,255,0.2)]">
+      PROPERTY MANAGEMENT
+    </h2>
+  </div>
+
+  <p className="text-lg mt-4 max-w-3xl mx-auto">
+    השקעה בראש שקט – אנחנו דואגים להכול, אתם נהנים מהתשואה.
+  </p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-16 max-w-7xl mx-auto">
+    {[
+      {
+        image: "/images/reno4.jpg",
+        icon: BuildingOffice2Icon,
+        title: "טיפול מלא בביורוקרטיה",
+        subtitle: "הפקדות, חשבוניות ודיווחים לשלטונות",
+      },
+      {
+        image: "/images/reno4.jpg",
+        icon: UsersIcon,
+        title: "ניהול תמחור דינמי",
+        subtitle: "לפי ביקוש ואירועים בעיר",
+      },
+      {
+        image: "/images/reno4.jpg",
+        icon: CurrencyDollarIcon,
+        title: "שירותי ניקיון, כניסה",
+        subtitle: "אחזקה שוטפת ותמיכה טכנית",
+      },
+      {
+        image: "/images/reno4.jpg",
+        icon: HomeModernIcon,
+        title: "שירות לקוחות 24/7",
+        subtitle: "וטיפול בדיירים",
+      },
+      {
+        image: "/images/reno4.jpg",
+        icon: BuildingOffice2Icon,
+        title: "ניהול פרופילים",
+        subtitle: "בפלטפורמות ההשכרה",
+      },
+    ].map((item, index) => {
+      const Icon = item.icon;
+      return (
+        <div
+          key={index}
+          className="relative w-full aspect-square rounded-lg overflow-hidden shadow-lg"
+        >
+          <Image
+            src={item.image}
+            alt="property-management"
+            fill
+            className="object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-20 px-4">
+            <Icon className="h-12 w-12 text-white mb-3" />
+            <p className="text-lg font-semibold">{item.title}</p>
+            <p className="text-orange-400 text-md mt-1">{item.subtitle}</p>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</section>
+
+
       {/* Team Section */}
-      <section className="bg-zinc-900 text-white text-center py-24 px-4 sm:px-6">
+      <section className="bg-black text-white text-center py-24 px-4 sm:px-6">
         <h2 className="text-4xl sm:text-5xl font-extrabold mb-16">הכירו את הצוות שלנו</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {["/images/nadav.png", "/images/nadav.png", "/images/nadav.png"].map(
