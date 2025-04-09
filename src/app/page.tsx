@@ -40,16 +40,17 @@ export default function Home() {
 
       <main className="pt-24">
         {/* Hero Section */}
-        <section className="relative h-screen bg-cover bg-center" style={{ backgroundImage: 'url(/images/budapest-view.jpg)' }}>
-          <div className="bg-black bg-opacity-50 h-full flex flex-col justify-center items-center text-white text-center px-4">
+        <section className="relative h-screen bg-cover bg-center" style={{ backgroundImage: 'url(/images/budapest-castle.jpg)' }}>
+        <div className=" bg-opacity-10 h-full flex flex-col justify-center items-center text-white text-center px-6">
             <h2 className="text-3xl md:text-5xl font-semibold mb-4">250+ Apartments Across Budapest</h2>
             <p className="text-lg md:text-2xl mb-6">Trusted by Locals & International Investors</p>
             <div className="space-x-4">
-              
+              <Link href="#properties" className="bg-white text-black px-4 py-2 rounded shadow hover:bg-gray-100 transition">View Properties</Link>
               <Link href="#contact" className="bg-transparent border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition">Contact Us</Link>
             </div>
           </div>
         </section>
+
 
         {/* About Us */}
         <section id="about" className="max-w-6xl mx-auto px-4 py-16 text-center">
