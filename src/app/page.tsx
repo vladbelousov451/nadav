@@ -34,16 +34,22 @@ export default function Home() {
 
       {/* Hero Section */}
       <div
-        className="h-[70vh] sm:h-[90vh] flex items-center justify-center bg-cover bg-center"
-        style={{
-          backgroundImage:
-            'url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Budapest_Hungarian_Parliament_%2831363963556%29.jpg/1280px-Budapest_Hungarian_Parliament_%2831363963556%29.jpg")',
-        }}
-      >
-        <h1 className="text-white text-3xl sm:text-5xl md:text-6xl font-bold">
-          אודות החברה שלנו
-        </h1>
-      </div>
+  className="h-[70vh] sm:h-[90vh] flex flex-col items-center justify-center bg-cover bg-center"
+  style={{
+    backgroundImage:
+      'url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Budapest_Hungarian_Parliament_%2831363963556%29.jpg/1280px-Budapest_Hungarian_Parliament_%2831363963556%29.jpg")',
+  }}
+>
+  <h1 className="text-white text-3xl sm:text-5xl md:text-6xl font-bold">
+    אודות החברה שלנו
+  </h1>
+  <a
+    href="#contact"
+    className="mt-6 inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded transition"
+  >
+    דברו איתנו
+  </a>
+</div>
 
       {/* Investments Section */}
       <section className="bg-zinc-900 py-16 sm:py-24 md:py-32 px-4 sm:px-6 text-center relative overflow-hidden">
@@ -275,6 +281,44 @@ export default function Home() {
           )}
         </div>
       </section>
+      {/* Contact Us Section */}
+<section 
+id="contact"
+className="bg-black text-white py-20 px-4 sm:px-6 text-center">
+  <h2 className="text-4xl sm:text-5xl font-extrabold mb-10">צור קשר</h2>
+  <p className="max-w-2xl mx-auto text-lg mb-10">
+    מלאו את הטופס ונחזור אליכם בהקדם האפשרי.
+  </p>
+  <form className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 text-right">
+    <input
+      type="text"
+      placeholder="שם מלא"
+      className="p-3 rounded bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-orange-400 col-span-1"
+    />
+    <input
+      type="email"
+      placeholder="דוא\ל"
+      className="p-3 rounded bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-orange-400 col-span-1"
+    />
+    <input
+      type="tel"
+      placeholder="טלפון"
+      className="p-3 rounded bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-orange-400 col-span-2"
+    />
+    <textarea
+      rows={5}
+      placeholder="הודעה"
+      className="p-3 rounded bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-orange-400 col-span-2 resize-none"
+    />
+    <button
+      type="submit"
+      className="bg-orange-500 hover:bg-orange-600 transition text-white font-bold py-3 px-6 rounded col-span-2"
+    >
+      שלח הודעה
+    </button>
+  </form>
+</section>
+
     </div>
   );
 }
