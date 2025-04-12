@@ -4,40 +4,42 @@ export default function ContactForm() {
   return (
     <section
       id="contact"
-      className="bg-black text-white py-20 px-4 sm:px-6 text-center"
+      className="relative bg-zinc-900 text-white py-24 px-4 sm:px-6 text-center overflow-hidden"
     >
-      <h2 className="text-4xl sm:text-5xl font-extrabold mb-10">צור קשר</h2>
-      <p className="max-w-2xl mx-auto text-lg mb-10">
-        מלאו את הטופס ונחזור אליכם בהקדם האפשרי.
-      </p>
-      <form className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 text-right">
-        <input
-          type="text"
-          placeholder="שם מלא"
-          className="p-3 rounded bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-orange-400 col-span-1"
-        />
-        <input
-          type="email"
-          placeholder="דוא\ל"
-          className="p-3 rounded bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-orange-400 col-span-1"
-        />
-        <input
-          type="tel"
-          placeholder="טלפון"
-          className="p-3 rounded bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-orange-400 col-span-2"
-        />
-        <textarea
-          rows={5}
-          placeholder="הודעה"
-          className="p-3 rounded bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-orange-400 col-span-2 resize-none"
-        />
-        <button
-          type="submit"
-          className="bg-orange-500 hover:bg-orange-600 transition text-white font-bold py-3 px-6 rounded col-span-2"
-        >
-          שלח הודעה
-        </button>
-      </form>
+      {/* Watermark Background Text */}
+      <div className="absolute text-[20vw] text-white/5 font-extrabold top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none z-0">
+        CONTACT
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10">
+        <h2 className="text-4xl sm:text-5xl font-extrabold mb-4">בואו נדבר</h2>
+        <p className="text-lg mb-12 text-zinc-300">השאירו פרטים ונחזור אליכם בהקדם</p>
+
+        <form className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 text-right items-end">
+          <input
+            type="text"
+            placeholder="שם מלא"
+            className="w-full px-4 py-3 border border-white text-white bg-transparent rounded transition focus:outline-none focus:ring-2 focus:ring-orange-400"
+          />
+          <input
+            type="tel"
+            placeholder="טלפון"
+            className="w-full px-4 py-3 border border-white text-white bg-transparent rounded transition focus:outline-none focus:ring-2 focus:ring-orange-400"
+          />
+          <input
+            type="email"
+            placeholder="מייל"
+            className="w-full px-4 py-3 border border-white text-white bg-transparent rounded transition focus:outline-none focus:ring-2 focus:ring-orange-400"
+          />
+          <button
+            type="submit"
+            className="bg-orange-400 hover:bg-orange-500 text-black font-bold py-3 rounded transition w-full"
+          >
+            חזרו אלי
+          </button>
+        </form>
+      </div>
     </section>
   );
 }

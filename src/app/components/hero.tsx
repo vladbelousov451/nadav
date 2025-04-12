@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section
-      className="h-[60vh] sm:h-[70vh] flex flex-col justify-center items-center text-center bg-cover bg-center"
+      className="h-[60vh] sm:h-[70vh] flex flex-col justify-center items-center text-white text-center bg-cover bg-center"
       style={{
         backgroundImage: "url('/images/hero-bg.jpg')",
       }}
