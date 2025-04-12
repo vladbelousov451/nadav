@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Navbar from "./components/navbar";
 import ContactCTA from "./components/ContactCTA"; // or ContactCTA if that's your form
 import Hero from "./components/hero";
+import Footer  from "./components/footer";
 export const metadata: Metadata = {
   title: "IRM Real Estate",
   description: "השקעות נדל״ן בבודפשט",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Hero/>
         <main>{children}</main>
         <ContactCTA /> {/* ✅ This renders on every page */}
+        <Footer/>
       </body>
     </html>
   );
