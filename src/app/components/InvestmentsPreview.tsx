@@ -41,7 +41,6 @@ export default function Investments() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="relative bg-zinc-900 text-white py-24 px-4 sm:px-6 text-center overflow-hidden"
     >
-
       <div className="relative mb-10">
         <div className="text-[10vw] text-white/10 font-extrabold leading-none">
           INVESTMENTS
@@ -51,9 +50,11 @@ export default function Investments() {
         </h2>
       </div>
 
-      <h3 className="text-xl sm:text-2xl mt-4">השקעות נדל"ן בהתאמה אישית</h3>
+      <h3 className="text-xl sm:text-2xl mt-4">
+        השקעות נדל&quot;ן בהתאמה אישית
+      </h3>
       <p className="text-sm sm:text-lg mt-4">
-        אנו מתמחים באיתור ובביצוע עסקאות נדל"ן במגוון אסטרטגיות, ביניהן:
+        אנו מתמחים באיתור ובביצוע עסקאות נדל&quot;ן במגוון אסטרטגיות, ביניהן:
       </p>
       <p className="text-sm sm:text-base mt-2 max-w-3xl mx-auto">
         כל השקעה מותאמת אישית לפרופיל המשקיע, תוך תכנון מקצועי לביצוע ובניית אסטרטגיה מסודרת.
@@ -63,8 +64,16 @@ export default function Investments() {
         {data.map((item, index) => {
           const Icon = item.icon;
           return (
-            <div key={index} className="relative w-full aspect-square rounded-lg overflow-hidden shadow-lg">
-              <Image src={item.image} alt={`investment-${index}`} fill className="object-cover opacity-50" />
+            <div
+              key={index}
+              className="relative w-full aspect-square rounded-lg overflow-hidden shadow-lg"
+            >
+              <Image
+                src={item.image}
+                alt={`investment-${index}`}
+                fill
+                className="object-cover opacity-50"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-20 px-4">
                 <Icon className="h-12 w-12 text-white mb-3" />
